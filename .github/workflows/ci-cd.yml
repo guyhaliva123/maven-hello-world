@@ -172,6 +172,8 @@ jobs:
           context: ./myapp
           file: ./myapp/Dockerfile
           push: true
+          build-args: |
+            JAR_VERSION=${{ steps.version.outputs.VERSION }}
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/myapp:latest
             ${{ secrets.DOCKER_USERNAME }}/myapp:${{ steps.version.outputs.VERSION }}

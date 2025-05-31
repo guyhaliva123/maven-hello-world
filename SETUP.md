@@ -115,7 +115,7 @@ The Docker container includes modern JVM flags:
 ## Monitoring
 
 - Check GitHub Actions tab for pipeline status
-- Docker images available at: `https://hub.docker.com/r/YOUR_USERNAME/myapp`
+- Docker images available at: `https://hub.docker.com/r/guyhaliva/myapp`
 - Artifacts stored for 30 days in GitHub
 
 ## Troubleshooting
