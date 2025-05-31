@@ -1,11 +1,15 @@
 # Use Eclipse Temurin JRE 17 as base image (supports JDK 13+)
 FROM eclipse-temurin:17-jre
 
+# Accept version as build argument
+ARG JAR_VERSION
+ENV JAR_VERSION=${JAR_VERSION}
+
 # Set working directory
 WORKDIR /app
 
-# Copy the JAR file
-COPY target/myapp-*.jar app.jar
+# Copy the specific JAR file using the version argument
+COPY target/myapp-${JAR_VERSION}.jar app.jar
 
 # Create a non-root user
 RUN groupadd -r appuser && useradd -r -g appuser appuser
