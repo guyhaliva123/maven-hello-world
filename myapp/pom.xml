@@ -25,6 +25,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${junit.version}</version>
+      <!-- test scope means that the dependency is only used for testing and not for the main application -->
       <scope>test</scope>
     </dependency>
   </dependencies>
